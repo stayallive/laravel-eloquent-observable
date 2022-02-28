@@ -1,0 +1,48 @@
+{
+    "name": "stayallive/laravel-eloquent-observable",
+    "type": "library",
+    "description": "Register Eloquent model event listeners just-in-time directly from the model.",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "observers"
+    ],
+    "homepage": "https://github.com/stayallive/laravel-eloquent-observable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Bouma",
+            "email": "alex@bouma.me"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stayallive\\Laravel\\Eloquent\\Observable\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3",
+        "orchestra/testbench": "^7.0",
+        "friendsofphp/php-cs-fixer": "3.6.*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --stop-on-failure",
+        "test:ci": "vendor/bin/phpunit",
+        "phpcs": "vendor/bin/php-cs-fixer fix",
+        "phpcs:ci": "vendor/bin/php-cs-fixer fix --dry-run --diff"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    }
+}
