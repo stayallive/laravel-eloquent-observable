@@ -1,5 +1,10 @@
 # Laravel Eloquent Observable
 
+[![Latest Version](https://img.shields.io/github/release/stayallive/laravel-eloquent-observable.svg?style=flat-square)](https://github.com/stayallive/laravel-eloquent-observable/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/github/workflow/status/stayallive/laravel-eloquent-observable/CI/master.svg?style=flat-square)](https://github.com/stayallive/laravel-eloquent-observable/actions/workflows/ci.yaml)
+[![Total Downloads](https://img.shields.io/packagist/dt/stayallive/laravel-eloquent-observable.svg?style=flat-square)](https://packagist.org/packages/stayallive/laravel-eloquent-observable)
+
 Register Eloquent model event listeners just-in-time directly from the model.
 
 Using [Observers](https://laravel.com/docs/9.x/eloquent#observers) can introduce a (significant) overhead on the application since they are usually registered in a service
