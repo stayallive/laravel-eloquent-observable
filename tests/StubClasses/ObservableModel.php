@@ -72,6 +72,10 @@ class ObservableModel extends Model
     {
         $model->eventsDisptached['deleted'] = true;
     }
+    public static function onForceDeleting(self $model): void
+    {
+        $model->eventsDisptached['onForceDeleting'] = true;
+    }
     public static function onForceDeleted(self $model): void
     {
         $model->eventsDisptached['forceDeleted'] = true;
