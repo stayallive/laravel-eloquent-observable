@@ -24,7 +24,7 @@ class ObservableTest extends TestCase
 
             $this->assertTrue(
                 $events->hasListeners($listener = "eloquent.{$event}: " . ObservableModel::class),
-                "Listener {$listener} is not registered"
+                "Listener {$listener} is not registered",
             );
         }
     }
@@ -38,7 +38,7 @@ class ObservableTest extends TestCase
         foreach (ObservableModel::registerTraitWithEventsEvents() as $event) {
             $this->assertTrue(
                 $events->hasListeners($listener = "eloquent.{$event}: " . ObservableModel::class),
-                "Listener {$listener} is not registered"
+                "Listener {$listener} is not registered",
             );
         }
     }
@@ -63,7 +63,7 @@ class ObservableTest extends TestCase
 
         $this->assertFalse(
             $events->hasListeners($listener = 'eloquent.customEventNotRegistered: ' . ObservableModel::class),
-            "Listener {$listener} is not registered"
+            "Listener {$listener} is not registered",
         );
     }
 }
