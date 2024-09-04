@@ -12,6 +12,10 @@ provider which results in every model in your application with a observer is "bo
 package aims to reduce that overhead by connecting listeners just-in-time whenever the Eloquent model is booted (first used) in the request. The event callbacks are also
 defined on the model itself keeping the code cleaner, althought this is my preference of course and if you disagree this might not be the package for you.
 
+> [!NOTE]
+> Laravel 10.44 [introduced](https://laravel-news.com/laravel-10-44-0#content-new-observedby-attribute-for-models) the `ObservedBy` attribute which allows you to define the observer on the model itself which negates all the performance benefits of this package.
+> However this package still provides an alternative way to define the event handler methods on the model itself so might still be considered useful but using the `ObservedBy` attribute will solve the performance issue with registering the model observers inside a service provider.
+
 ## Installation
 
 ```bash
