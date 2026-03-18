@@ -6,6 +6,13 @@ trait Observable
 {
     public static function bootObservable(): void
     {
+        static::whenBooted(static function () {
+            static::registerObservableModelEvents();
+        });
+    }
+
+    private static function registerObservableModelEvents(): void
+    {
         $events = (new static)->getObservableEvents();
 
         $traitEvents = self::collectEventsRegisteredByTraits();
