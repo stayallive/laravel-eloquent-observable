@@ -6,9 +6,14 @@ trait Observable
 {
     public static function bootObservable(): void
     {
-        static::whenBooted(static function () {
+        // The booted callback was introduced in v12.8.0, so we check if it exists before using it
+        if (method_exists(static::class, 'whenBooted')) {
+            static::whenBooted(static function () {
+                static::registerObservableModelEvents();
+            });
+        } else {
             static::registerObservableModelEvents();
-        });
+        }
     }
 
     private static function registerObservableModelEvents(): void
